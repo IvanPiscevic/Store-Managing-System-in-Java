@@ -1,0 +1,9 @@
+1
+Food
+Edible items.
+2
+Technical
+Technical equipment.
+3
+Car
+Transportation device, has four wheels.
