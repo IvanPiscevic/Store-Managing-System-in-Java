@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" fillWidth="false" maxHeight="535.0" maxWidth="500.0" minHeight="535.0" minWidth="500.0" prefHeight="535.0" prefWidth="500.0" spacing="20.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.piscevic.SearchFactoryController">
+    <children>
+        <fx:include source="menuBar.fxml" />
+        <Label alignment="CENTER" prefHeight="30.0" prefWidth="147.0" style="-fx-font-weight: bolder; -fx-background-color: transparent;" text="Factory search" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <HBox alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="343.0">
+            <children>
+                <Label alignment="TOP_CENTER" contentDisplay="TOP" prefHeight="20.0" prefWidth="160.0" text="Enter factory name:   " textAlignment="CENTER">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="factoryName" prefHeight="25.0" prefWidth="176.0" />
+            </children>
+            <VBox.margin>
+                <Insets left="140.0" />
+            </VBox.margin>
+        </HBox>
+      <HBox alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="340.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="TOP" prefHeight="20.0" prefWidth="160.0" text="Enter factory address:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="factoryAddress" prefHeight="25.0" prefWidth="174.0" />
+         </children>
+         <VBox.margin>
+            <Insets bottom="15.0" left="140.0" />
+         </VBox.margin>
+      </HBox>
+        <HBox layoutX="124.0" layoutY="115.0" prefHeight="27.0" prefWidth="322.0">
+            <children>
+                <Label alignment="TOP_CENTER" contentDisplay="TOP" prefHeight="20.0" prefWidth="184.0" text="Enter Item(s) in factory:   " textAlignment="CENTER">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets />
+                    </HBox.margin>
+                </Label>
+            <TextField fx:id="factoryItems" prefHeight="25.0" prefWidth="183.0">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </TextField>
+            </children>
+            <VBox.margin>
+                <Insets left="150.0" top="-10.0" />
+            </VBox.margin>
+        </HBox>
+        <Button mnemonicParsing="false" onAction="#onSearchButtonClick" text="Search">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Button>
+        <TableView fx:id="factoryTableView" prefHeight="294.0" prefWidth="500.0">
+            <columns>
+                <TableColumn fx:id="nameTableColumn" prefWidth="92.0" text="Name" />
+                <TableColumn fx:id="addressTableColumn" prefWidth="160.0" text="Address" />
+            <TableColumn fx:id="itemsTableColumn" prefWidth="247.0" text="Items" />
+            </columns>
+        </TableView>
+    </children>
+</VBox>
